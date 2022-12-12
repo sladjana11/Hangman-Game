@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  font-size:1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+  overflow: hidden;
+  background-color: #123;
+  color: #ce9c9c;
+}
+h1 {
+  margin: 1.2rem 0 0;
+}
+.game-container{
+  padding:1.2rem 1.5rem;
+  position: relative;
+  margin:auto;
+  height:25rem;
+  width:30rem;
+} 
+
+.wrong-letters-container{
+  position: absolute;
+  top:-3rem;
+  right:1.2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+
+}
+
+.wrong-letters-container p{
+  margin:0 0 0.6rem;
+  font-size: 1.4rem;
+}
+
+.wrong-letters-container span{
+  font-size:1.4rem;
+}
+
+.word{
+  display:flex;
+  text-align: center;
+  position:absolute;
+  bottom:1rem;
+  left:10%;
+}
+
+.letter{
+  border-bottom:1px solid #2980be;
+  display:inline-block;
+  align-items: left;
+  justify-content: center;
+  margin:0 3px;
+  height:2.8rem;
+  width:2.2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.figure-container {
+  fill: transparent;
+  stroke: #ce9c9d;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+.figure-parts {
+  display: none;
+}
+
+/* Popup and Notification styling */
+.popup-container{
+  background-color: rgba(0,0,0,0.8);
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  display:flex;
+  display:none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup{
+  background-color:#2980be;
+  border-radius:7px;
+  box-shadow:0 0.7rem 0.7rem 0.2rem rgba(255,255,255,0.3);
+  padding:1.3rem;
+  text-align:center;
+}
+
+.popup-button{
+cursor:pointer;
+background-color:#fff;
+color:#ce9c9d;
+border:0;
+margin-top:1.3rem;
+margin-bottom: 1.5rem;
+padding:0.8rem 1.3rem;
+font-size: 1rem;
+border-radius: 5px;
+}
+
+.popup-button:active{
+  transform:scale(0.50);
+}
+
+.popup-button:focus{
+  outline:0;
+}
+
+.notification-container{
+  background-color: rgba(0,0,0,0.3);
+  border-radius:10px 10px 0 0;
+  padding:1rem 1.3rem;
+  position: absolute;
+  bottom:-40rem;
+  transition:transform 0.3s ease-in-out;
+}
+.notification-container p{margin:0;}
+.notification-container.show{transform: translateY(-40rem);}
